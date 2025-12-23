@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA7F11302EFAC34900F87E3C /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */; };
+		FA7F11312EFAC34900F87E3C /* ScreenTimeDayChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */; };
+		FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */; };
+		FA7F11332EFAC34900F87E3C /* AddEditDisciplineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */; };
+		FA7F11342EFAC34900F87E3C /* DateBuckets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */; };
+		FA7F11352EFAC34900F87E3C /* DonutBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */; };
+		FA7F11362EFAC34900F87E3C /* MostUsedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */; };
+		FA7F11372EFAC34900F87E3C /* ScreenTimeWeekChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */; };
+		FA7F11382EFAC34900F87E3C /* DisciplineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */; };
+		FA7F11392EFAC34900F87E3C /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112E2EFAC34900F87E3C /* StatsView.swift */; };
+		FA7F113A2EFAC34900F87E3C /* MonthHeatmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */; };
+		FA7F113B2EFAC34900F87E3C /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111B2EFAC34900F87E3C /* ColorHex.swift */; };
+		FA7F113C2EFAC34900F87E3C /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111E2EFAC34900F87E3C /* TimerService.swift */; };
+		FA7F113D2EFAC34900F87E3C /* Discipline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11172EFAC34900F87E3C /* Discipline.swift */; };
+		FA7F113E2EFAC34900F87E3C /* BigTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11202EFAC34900F87E3C /* BigTimerView.swift */; };
+		FA7F113F2EFAC34900F87E3C /* DisciplineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */; };
+		FA7F11402EFAC34900F87E3C /* ActiveTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111A2EFAC34900F87E3C /* ActiveTimerState.swift */; };
+		FA7F11412EFAC34900F87E3C /* ColorPickerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */; };
+		FA7F11422EFAC34900F87E3C /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111D2EFAC34900F87E3C /* StatsService.swift */; };
+		FA7F11432EFAC34900F87E3C /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11182EFAC34900F87E3C /* TimeEntry.swift */; };
+		FA7F11442EFAC34900F87E3C /* TrendLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11272EFAC34900F87E3C /* TrendLineView.swift */; };
+		FA7F11452EFAC34900F87E3C /* VibeTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */; };
+		FA7F11462EFAC34900F87E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7F11162EFAC34900F87E3C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA7F11042EFAC31000F87E3C /* vibeTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vibeTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeTrackApp.swift; sourceTree = "<group>"; };
+		FA7F11162EFAC34900F87E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA7F11172EFAC34900F87E3C /* Discipline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discipline.swift; sourceTree = "<group>"; };
+		FA7F11182EFAC34900F87E3C /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
+		FA7F111A2EFAC34900F87E3C /* ActiveTimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTimerState.swift; sourceTree = "<group>"; };
+		FA7F111B2EFAC34900F87E3C /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
+		FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuckets.swift; sourceTree = "<group>"; };
+		FA7F111D2EFAC34900F87E3C /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
+		FA7F111E2EFAC34900F87E3C /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		FA7F11202EFAC34900F87E3C /* BigTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTimerView.swift; sourceTree = "<group>"; };
+		FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGrid.swift; sourceTree = "<group>"; };
+		FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutBreakdownView.swift; sourceTree = "<group>"; };
+		FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHeatmapView.swift; sourceTree = "<group>"; };
+		FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostUsedListView.swift; sourceTree = "<group>"; };
+		FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeDayChart.swift; sourceTree = "<group>"; };
+		FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeWeekChart.swift; sourceTree = "<group>"; };
+		FA7F11272EFAC34900F87E3C /* TrendLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendLineView.swift; sourceTree = "<group>"; };
+		FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekBarsView.swift; sourceTree = "<group>"; };
+		FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSessionView.swift; sourceTree = "<group>"; };
+		FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDisciplineView.swift; sourceTree = "<group>"; };
+		FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineListView.swift; sourceTree = "<group>"; };
+		FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineRow.swift; sourceTree = "<group>"; };
+		FA7F112E2EFAC34900F87E3C /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA7F11012EFAC31000F87E3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA7F10FB2EFAC31000F87E3C = {
+			isa = PBXGroup;
+			children = (
+				FA7F11152EFAC34900F87E3C /* App */,
+				FA7F11162EFAC34900F87E3C /* Assets.xcassets */,
+				FA7F11192EFAC34900F87E3C /* Models */,
+				FA7F111F2EFAC34900F87E3C /* Services */,
+				FA7F112F2EFAC34900F87E3C /* Views */,
+				FA7F11052EFAC31000F87E3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA7F11052EFAC31000F87E3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F11042EFAC31000F87E3C /* vibeTrack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA7F11152EFAC34900F87E3C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA7F11192EFAC34900F87E3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F11172EFAC34900F87E3C /* Discipline.swift */,
+				FA7F11182EFAC34900F87E3C /* TimeEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA7F111F2EFAC34900F87E3C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F111A2EFAC34900F87E3C /* ActiveTimerState.swift */,
+				FA7F111B2EFAC34900F87E3C /* ColorHex.swift */,
+				FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */,
+				FA7F111D2EFAC34900F87E3C /* StatsService.swift */,
+				FA7F111E2EFAC34900F87E3C /* TimerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA7F11292EFAC34900F87E3C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F11202EFAC34900F87E3C /* BigTimerView.swift */,
+				FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */,
+				FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */,
+				FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */,
+				FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */,
+				FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */,
+				FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */,
+				FA7F11272EFAC34900F87E3C /* TrendLineView.swift */,
+				FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FA7F112F2EFAC34900F87E3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F11292EFAC34900F87E3C /* Components */,
+				FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */,
+				FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */,
+				FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */,
+				FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */,
+				FA7F112E2EFAC34900F87E3C /* StatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA7F11032EFAC31000F87E3C /* vibeTrack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA7F11112EFAC31000F87E3C /* Build configuration list for PBXNativeTarget "vibeTrack" */;
+			buildPhases = (
+				FA7F11002EFAC31000F87E3C /* Sources */,
+				FA7F11012EFAC31000F87E3C /* Frameworks */,
+				FA7F11022EFAC31000F87E3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vibeTrack;
+			packageProductDependencies = (
+			);
+			productName = vibeTrack;
+			productReference = FA7F11042EFAC31000F87E3C /* vibeTrack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA7F10FC2EFAC31000F87E3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					FA7F11032EFAC31000F87E3C = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FA7F10FF2EFAC31000F87E3C /* Build configuration list for PBXProject "vibeTrack" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA7F10FB2EFAC31000F87E3C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FA7F11052EFAC31000F87E3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA7F11032EFAC31000F87E3C /* vibeTrack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA7F11022EFAC31000F87E3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7F11462EFAC34900F87E3C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA7F11002EFAC31000F87E3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7F11302EFAC34900F87E3C /* ActiveSessionView.swift in Sources */,
+				FA7F11312EFAC34900F87E3C /* ScreenTimeDayChart.swift in Sources */,
+				FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */,
+				FA7F11332EFAC34900F87E3C /* AddEditDisciplineView.swift in Sources */,
+				FA7F11342EFAC34900F87E3C /* DateBuckets.swift in Sources */,
+				FA7F11352EFAC34900F87E3C /* DonutBreakdownView.swift in Sources */,
+				FA7F11362EFAC34900F87E3C /* MostUsedListView.swift in Sources */,
+				FA7F11372EFAC34900F87E3C /* ScreenTimeWeekChart.swift in Sources */,
+				FA7F11382EFAC34900F87E3C /* DisciplineRow.swift in Sources */,
+				FA7F11392EFAC34900F87E3C /* StatsView.swift in Sources */,
+				FA7F113A2EFAC34900F87E3C /* MonthHeatmapView.swift in Sources */,
+				FA7F113B2EFAC34900F87E3C /* ColorHex.swift in Sources */,
+				FA7F113C2EFAC34900F87E3C /* TimerService.swift in Sources */,
+				FA7F113D2EFAC34900F87E3C /* Discipline.swift in Sources */,
+				FA7F113E2EFAC34900F87E3C /* BigTimerView.swift in Sources */,
+				FA7F113F2EFAC34900F87E3C /* DisciplineListView.swift in Sources */,
+				FA7F11402EFAC34900F87E3C /* ActiveTimerState.swift in Sources */,
+				FA7F11412EFAC34900F87E3C /* ColorPickerGrid.swift in Sources */,
+				FA7F11422EFAC34900F87E3C /* StatsService.swift in Sources */,
+				FA7F11432EFAC34900F87E3C /* TimeEntry.swift in Sources */,
+				FA7F11442EFAC34900F87E3C /* TrendLineView.swift in Sources */,
+				FA7F11452EFAC34900F87E3C /* VibeTrackApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FA7F110F2EFAC31000F87E3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 75TSNUCB2Q;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA7F11102EFAC31000F87E3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 75TSNUCB2Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FA7F11122EFAC31000F87E3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75TSNUCB2Q;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HSE.vibeTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		FA7F11132EFAC31000F87E3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75TSNUCB2Q;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = HSE.vibeTrack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA7F10FF2EFAC31000F87E3C /* Build configuration list for PBXProject "vibeTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7F110F2EFAC31000F87E3C /* Debug */,
+				FA7F11102EFAC31000F87E3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA7F11112EFAC31000F87E3C /* Build configuration list for PBXNativeTarget "vibeTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA7F11122EFAC31000F87E3C /* Debug */,
+				FA7F11132EFAC31000F87E3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA7F10FC2EFAC31000F87E3C /* Project object */;
+}
