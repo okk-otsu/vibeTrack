@@ -9,7 +9,6 @@ import SwiftUI
 
 extension Color {
 
-    /// Создание Color из hex строки (#RRGGBB или RRGGBB)
     init(hex: String) {
         var hex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         hex = hex.replacingOccurrences(of: "#", with: "")
@@ -24,7 +23,6 @@ extension Color {
         self.init(red: r, green: g, blue: b)
     }
 
-    /// Конвертация Color → hex (#RRGGBB)
     func toHex() -> String {
         #if os(iOS)
         let uiColor = UIColor(self)

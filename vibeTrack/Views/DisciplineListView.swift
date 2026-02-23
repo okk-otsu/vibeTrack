@@ -172,7 +172,6 @@ extension StatsService {
         let start = cal.startOfDay(for: .now)
         let end = cal.date(byAdding: .day, value: 1, to: start)!
 
-        // завершённые за сегодня
         let fd = FetchDescriptor<TimeEntry>(
             predicate: #Predicate { e in
                 e.endedAt != nil && e.startedAt >= start && e.startedAt < end
@@ -181,7 +180,6 @@ extension StatsService {
         let finished = (try? modelContext.fetch(fd)) ?? []
         var total = finished.reduce(0) { $0 + $1.durationSeconds }
 
-        // добавить активную (если началась сегодня)
         if let activeEntry,
            activeEntry.startedAt >= start && activeEntry.startedAt < end {
             total += max(0, Int(Date.now.timeIntervalSince(activeEntry.startedAt)))

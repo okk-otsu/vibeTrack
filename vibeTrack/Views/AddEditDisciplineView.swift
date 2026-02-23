@@ -12,14 +12,12 @@ struct AddEditDisciplineView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
-    // если nil — создаём, если не nil — редактируем
     private let disciplineToEdit: Discipline?
 
     @State private var name: String
     @State private var colorHex: String
     @State private var showDuplicateAlert = false
 
-    // 30 цветов (hex), ты можешь подправить какие нравятся
     private let palette: [String] = [
         // Blue
         "#3B82F6", "#2563EB", "#60A5FA",
@@ -36,7 +34,7 @@ struct AddEditDisciplineView: View {
         // Green
         "#22C55E", "#16A34A", "#4ADE80",
 
-        // Teal / Cyan
+        // Cyan
         "#14B8A6", "#06B6D4", "#67E8F9",
 
         // Purple
@@ -45,7 +43,7 @@ struct AddEditDisciplineView: View {
         // Pink
         "#EC4899", "#F43F5E", "#FDA4AF",
 
-        // Neutral / Gray
+        // Gray
         "#64748B", "#475569", "#9CA3AF"
     ]
 
@@ -96,19 +94,15 @@ struct AddEditDisciplineView: View {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
 
-        // Проверка на дубликаты (регистрозависимо, как ты хотел):
-        // "матан" и "Матан" считаем разными
         if isDuplicateName(trimmed) {
             showDuplicateAlert = true
             return
         }
 
         if let d = disciplineToEdit {
-            // edit
             d.name = trimmed
             d.colorHex = colorHex
         } else {
-            // create
             let nextOrder = (try? modelContext.fetch(FetchDescriptor<Discipline>()).count) ?? 0
             let d = Discipline(name: trimmed, colorHex: colorHex, sortOrder: nextOrder)
             modelContext.insert(d)
@@ -121,7 +115,6 @@ struct AddEditDisciplineView: View {
     private func isDuplicateName(_ newName: String) -> Bool {
         let all = (try? modelContext.fetch(FetchDescriptor<Discipline>())) ?? []
         if let editing = disciplineToEdit {
-            // при редактировании игнорируем текущую дисциплину
             return all.contains { $0.id != editing.id && $0.name == newName }
         } else {
             return all.contains { $0.name == newName }

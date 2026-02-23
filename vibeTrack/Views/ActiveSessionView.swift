@@ -29,7 +29,7 @@ struct ActiveSessionView: View {
             
             Button(role: .destructive) {
                 try? timerService.stop(modelContext: modelContext)
-                dismiss() // вернуться на список
+                dismiss()
             } label: {
                 Label("Стоп", systemImage: "stop.fill")
                     .frame(maxWidth: .infinity)
@@ -38,14 +38,14 @@ struct ActiveSessionView: View {
             .padding(.horizontal)
             
             #if os(iOS)
-            Spacer(minLength: 300) // оптический сдвиг вверх
+            Spacer(minLength: 300)
             #elseif os(macOS)
             Spacer(minLength: 75)
             #endif
 
         }
         .padding(.top, 24)
-        .onReceive(timerService.$tick) { _ in } // обновление каждую секунду
+        .onReceive(timerService.$tick) { _ in } 
         .onChange(of: timerService.activeEntry) { _, newValue in
             if newValue == nil { dismiss() }
         }

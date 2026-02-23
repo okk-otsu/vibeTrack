@@ -28,11 +28,20 @@ struct RootView: View {
 
     var body: some View {
         TabView {
-            DisciplineListView()
-                .tabItem { Label("Сессии", systemImage: "timer") }
+            NavigationStack {
+                DisciplineListView()
+            }
+            .tabItem { Label("Сессии", systemImage: "timer") }
 
-            StatsView()
-                .tabItem { Label("Статистика", systemImage: "chart.bar") }
+            NavigationStack {
+                StatsView()
+            }
+            .tabItem { Label("Статистика", systemImage: "chart.bar") }
+
+            NavigationStack {
+                TimelineListScreen()
+            }
+            .tabItem { Label("Таймлайн", systemImage: "list.bullet.rectangle") }
         }
         .onAppear {
             timerService.bind(modelContext: modelContext)

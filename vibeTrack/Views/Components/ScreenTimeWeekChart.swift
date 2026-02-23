@@ -25,7 +25,7 @@ struct ScreenTimeWeekChart: View {
                     BarMark(
                         x: .value("Day", day.day, unit: .day),
                         y: .value("Minutes", Double(part.seconds) / 60.0),
-                        width: .fixed(14) // ближе к Screen Time
+                        width: .fixed(14)
                     )
                     .foregroundStyle(Color(hex: part.colorHex))
                 }

@@ -14,10 +14,8 @@ final class TimeEntry {
 
     var startedAt: Date
     var endedAt: Date?
-    /// Итоговая длительность в секундах (фиксируется при stop)
     var durationSeconds: Int
 
-    /// Для паузы: сколько уже накоплено (сек) + когда текущий сегмент стартовал
     var accumulatedSeconds: Int
     var runningSegmentStartedAt: Date?
     var isRunning: Bool

@@ -78,7 +78,6 @@ private struct MostUsedRow: View {
                         .monospacedDigit()
                 }
 
-                // прогресс-бар как в Screen Time
                 GeometryReader { geo in
                     let w = geo.size.width
                     let ratio = CGFloat(seconds) / CGFloat(max(maxSeconds, 1))

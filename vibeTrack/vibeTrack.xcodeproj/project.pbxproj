@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6CDF9C2F4BE33800C2B58F /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDF9B2F4BE33600C2B58F /* TimelineView.swift */; };
+		FA6CDF9E2F4BE3E200C2B58F /* EditEntryDurationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDF9D2F4BE3E100C2B58F /* EditEntryDurationSheet.swift */; };
+		FA6CDFA22F4BE95300C2B58F /* TimelineListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDFA12F4BE95200C2B58F /* TimelineListScreen.swift */; };
 		FA7F11302EFAC34900F87E3C /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */; };
 		FA7F11312EFAC34900F87E3C /* ScreenTimeDayChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */; };
 		FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */; };
@@ -30,9 +33,13 @@
 		FA7F11442EFAC34900F87E3C /* TrendLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11272EFAC34900F87E3C /* TrendLineView.swift */; };
 		FA7F11452EFAC34900F87E3C /* VibeTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */; };
 		FA7F11462EFAC34900F87E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7F11162EFAC34900F87E3C /* Assets.xcassets */; };
+		FAE25F792F4CF782000FDB4E /* AddManualSessionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE25F782F4CF780000FDB4E /* AddManualSessionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA6CDF9B2F4BE33600C2B58F /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		FA6CDF9D2F4BE3E100C2B58F /* EditEntryDurationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryDurationSheet.swift; sourceTree = "<group>"; };
+		FA6CDFA12F4BE95200C2B58F /* TimelineListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineListScreen.swift; sourceTree = "<group>"; };
 		FA7F11042EFAC31000F87E3C /* vibeTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vibeTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeTrackApp.swift; sourceTree = "<group>"; };
 		FA7F11162EFAC34900F87E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +64,7 @@
 		FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineListView.swift; sourceTree = "<group>"; };
 		FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineRow.swift; sourceTree = "<group>"; };
 		FA7F112E2EFAC34900F87E3C /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		FAE25F782F4CF780000FDB4E /* AddManualSessionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManualSessionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,9 @@
 		FA7F11292EFAC34900F87E3C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FAE25F782F4CF780000FDB4E /* AddManualSessionSheet.swift */,
+				FA6CDFA12F4BE95200C2B58F /* TimelineListScreen.swift */,
+				FA6CDF9D2F4BE3E100C2B58F /* EditEntryDurationSheet.swift */,
 				FA7F11202EFAC34900F87E3C /* BigTimerView.swift */,
 				FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */,
 				FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */,
@@ -138,6 +149,7 @@
 		FA7F112F2EFAC34900F87E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA6CDF9B2F4BE33600C2B58F /* TimelineView.swift */,
 				FA7F11292EFAC34900F87E3C /* Components */,
 				FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */,
 				FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */,
@@ -225,10 +237,14 @@
 				FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */,
 				FA7F11332EFAC34900F87E3C /* AddEditDisciplineView.swift in Sources */,
 				FA7F11342EFAC34900F87E3C /* DateBuckets.swift in Sources */,
+				FA6CDF9E2F4BE3E200C2B58F /* EditEntryDurationSheet.swift in Sources */,
 				FA7F11352EFAC34900F87E3C /* DonutBreakdownView.swift in Sources */,
+				FA6CDFA22F4BE95300C2B58F /* TimelineListScreen.swift in Sources */,
+				FA6CDF9C2F4BE33800C2B58F /* TimelineView.swift in Sources */,
 				FA7F11362EFAC34900F87E3C /* MostUsedListView.swift in Sources */,
 				FA7F11372EFAC34900F87E3C /* ScreenTimeWeekChart.swift in Sources */,
 				FA7F11382EFAC34900F87E3C /* DisciplineRow.swift in Sources */,
+				FAE25F792F4CF782000FDB4E /* AddManualSessionSheet.swift in Sources */,
 				FA7F11392EFAC34900F87E3C /* StatsView.swift in Sources */,
 				FA7F113A2EFAC34900F87E3C /* MonthHeatmapView.swift in Sources */,
 				FA7F113B2EFAC34900F87E3C /* ColorHex.swift in Sources */,

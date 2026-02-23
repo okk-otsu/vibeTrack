@@ -72,7 +72,6 @@ struct StatsService {
         let (start, end) = dayRange(for: date)
         let entries = finishedEntries(in: start, end, modelContext: modelContext)
 
-        // group by discipline
         var map: [UUID: (Discipline, Int)] = [:]
         for e in entries {
             guard let d = e.discipline else { continue }
@@ -93,7 +92,7 @@ struct StatsService {
 
         var totals: [Date: Int] = [:]
         for e in entries {
-            let day = cal.startOfDay(for: e.startedAt) // считаем по дню старта
+            let day = cal.startOfDay(for: e.startedAt)
             totals[day, default: 0] += e.durationSeconds
         }
         return totals
@@ -119,9 +118,9 @@ struct StatsService {
 extension StatsService {
     static func startOfWeek(for date: Date, calendar: Calendar = .current) -> Date {
         var cal = calendar
-        cal.firstWeekday = 2 // Monday
+        cal.firstWeekday = 2
         let comps = cal.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)
-        return cal.date(from: comps)! // начало недели
+        return cal.date(from: comps)!
     }
 
     static func weekRange(containing date: Date, calendar: Calendar = .current) -> (Date, Date) {
@@ -148,7 +147,6 @@ extension StatsService {
             totals[day, default: 0] += e.durationSeconds
         }
 
-        // 7 точек (пн..вс)
         return (0..<7).map { i in
             let d = cal.date(byAdding: .day, value: i, to: start)!
             return DayPoint(day: d, seconds: totals[cal.startOfDay(for: d), default: 0])
@@ -159,21 +157,21 @@ extension StatsService {
 
     struct StackPart: Identifiable {
         let id = UUID()
-        let key: String            // имя дисциплины
+        let key: String
         let colorHex: String
         let seconds: Int
     }
 
     struct DayStack: Identifiable {
         let id = UUID()
-        let day: Date              // startOfDay
-        let parts: [StackPart]     // stacked части
+        let day: Date
+        let parts: [StackPart]
         let totalSeconds: Int
     }
 
     struct HourStack: Identifiable {
         let id = UUID()
-        let hour: Int              // 0..23
+        let hour: Int
         let parts: [StackPart]
         let totalSeconds: Int
     }
@@ -192,7 +190,6 @@ extension StatsService {
 
         let entries = finishedEntries(in: weekStart, weekEnd, modelContext: modelContext)
 
-        // day -> disciplineKey -> seconds
         var map: [Date: [String: (hex: String, seconds: Int)]] = [:]
 
         for e in entries {
@@ -241,12 +238,11 @@ extension StatsService {
         let (start, end) = dayRange(for: day)
         let entries = finishedEntries(in: start, end, modelContext: modelContext)
 
-        // hour -> disciplineKey -> seconds
         var map: [Int: [String: (hex: String, seconds: Int)]] = [:]
 
         for e in entries {
             guard let d = e.discipline else { continue }
-            let hour = cal.component(.hour, from: e.startedAt) // bucket by start hour (как Screen Time)
+            let hour = cal.component(.hour, from: e.startedAt)
             let key = d.name
             var inner = map[hour, default: [:]]
             let prev = inner[key]?.seconds ?? 0
@@ -279,7 +275,6 @@ extension StatsService {
     ) -> [TopDisciplineRow] {
         let entries = finishedEntries(in: start, end, modelContext: modelContext)
 
-        // disciplineId -> (name, hex, seconds)
         var map: [PersistentIdentifier: (name: String, hex: String, seconds: Int)] = [:]
 
         for e in entries {

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MonthHeatmapView: View {
-    let monthDate: Date              // любая дата внутри месяца
-    let totals: [Date: Int]          // startOfDay -> seconds
+    let monthDate: Date
+    let totals: [Date: Int]
     @Binding var selectedDay: Date
 
     private let cal = Calendar.current
@@ -42,7 +42,6 @@ struct MonthHeatmapView: View {
             }
 
             HStack {
-                // легенда как в YPT можно потом
                 Spacer()
                 let monthTotal = totals.values.reduce(0,+)
                 Text("\(monthTitle): \(StatsService.formatHM(monthTotal))")
@@ -92,7 +91,6 @@ struct MonthHeatmapView: View {
     }
 
     private func heatColor(_ sec: Int) -> Color {
-        // Пороговые уровни (как в YPT: чем больше — тем насыщеннее)
         let h = Double(sec) / 3600.0
         if h == 0 { return Color.clear }
         if h < 1 { return Color.pink.opacity(0.15) }
@@ -106,18 +104,14 @@ struct MonthHeatmapView: View {
         let comps = cal.dateComponents([.year, .month], from: monthDate)
         let monthStart = cal.date(from: comps)!
 
-        // дни месяца
         let range = cal.range(of: .day, in: .month, for: monthStart)!
         let daysInMonth = range.count
 
-        // сдвиг под понедельник
-        // weekday: 1=Sun ... 7=Sat
         let weekday = cal.component(.weekday, from: monthStart)
-        let mondayBased = (weekday + 5) % 7  // 0..6 (Mon=0)
+        let mondayBased = (weekday + 5) % 7  
 
         var result: [Date] = []
 
-        // добавим "хвост" предыдущего месяца для выравнивания
         if mondayBased > 0 {
             for i in stride(from: mondayBased, to: 0, by: -1) {
                 if let d = cal.date(byAdding: .day, value: -i, to: monthStart) {
@@ -126,12 +120,10 @@ struct MonthHeatmapView: View {
             }
         }
 
-        // дни месяца
         for day in 0..<daysInMonth {
             result.append(cal.date(byAdding: .day, value: day, to: monthStart)!)
         }
 
-        // добить до кратности 7
         while result.count % 7 != 0 {
             result.append(cal.date(byAdding: .day, value: 1, to: result.last!)!)
         }

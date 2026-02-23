@@ -18,7 +18,6 @@ final class TimerService: ObservableObject {
     private let stateKey = "active_timer_state_v1"
 
     func bind(modelContext: ModelContext) {
-        // попытка восстановить активную запись после перезапуска
         guard let data = UserDefaults.standard.data(forKey: stateKey),
               let state = try? JSONDecoder().decode(ActiveTimerState.self, from: data)
         else { return }
@@ -37,7 +36,6 @@ final class TimerService: ObservableObject {
     }
 
     func start(discipline: Discipline, modelContext: ModelContext) throws {
-        // только одна активная запись
         if activeEntry != nil { return }
 
         let entry = TimeEntry(discipline: discipline, startedAt: .now)

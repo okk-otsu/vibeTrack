@@ -63,12 +63,11 @@ struct ScreenTimeDayChart: View {
     private func niceUpperMinutes(for maxSeconds: Int) -> Double {
         let m = Double(maxSeconds) / 60.0
 
-        // ступени как в Screen Time
-        let steps: [Double] = [60, 120, 240, 360, 480, 720, 960, 1440] // 1h,2h,4h,6h,8h,12h,16h,24h
+        let steps: [Double] = [60, 120, 240, 360, 480, 720, 960, 1440]
         for s in steps {
             if m <= s { return s }
         }
-        // если вдруг больше суток — округлим вверх до ближайших 6 часов
+
         let step = 360.0
         return ceil(m / step) * step
     }

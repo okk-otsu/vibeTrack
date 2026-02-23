@@ -28,7 +28,6 @@ struct DisciplineRow: View {
         )
 
         HStack(spacing: 14) {
-            // Play circle (как YPT)
             Button(action: onStart) {
                 ZStack {
                     Circle()
@@ -55,7 +54,6 @@ struct DisciplineRow: View {
                 .monospacedDigit()
                 .foregroundStyle(.secondary)
 
-            // ⋯ menu
             Menu {
                 Button("Редактировать предмет") { onEdit() }
                 Button("Удалить предмет", role: .destructive) { onDelete() }
@@ -95,7 +93,6 @@ extension StatsService {
         let finished = (try? modelContext.fetch(fd)) ?? []
         var total = finished.reduce(0) { $0 + $1.durationSeconds }
 
-        // если активная запись этой дисциплины началась сегодня — добавляем её время
         if let activeEntry,
            activeEntry.discipline?.id == did,
            activeEntry.startedAt >= start && activeEntry.startedAt < end
