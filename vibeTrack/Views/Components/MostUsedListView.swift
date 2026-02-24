@@ -13,9 +13,11 @@ struct MostUsedListView: View {
     let title: String
     let rows: [StatsService.TopDisciplineRow]
     let limit: Int = 7
+    
     private var shown: [StatsService.TopDisciplineRow] {
         expanded ? rows : Array(rows.prefix(limit))
     }
+    
     private var maxSec: Int { shown.first?.seconds ?? 1 }
 
     var body: some View {
@@ -43,7 +45,7 @@ struct MostUsedListView: View {
                     Button {
                         withAnimation(.snappy) { expanded.toggle() }
                     } label: {
-                        Text(expanded ? "Show Less" : "Show More")
+                        Text(expanded ? "Свернуть" : "Показать ещё")
                             .foregroundStyle(.blue)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -98,7 +100,8 @@ private struct MostUsedRow: View {
     private func pretty(_ seconds: Int) -> String {
         let h = seconds / 3600
         let m = (seconds % 3600) / 60
-        if h > 0 { return "\(h)h \(m)m" }
-        return "\(m)m"
+
+        if h > 0 { return "\(h)ч \(m)м" }
+        return "\(m)м"
     }
 }

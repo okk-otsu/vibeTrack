@@ -104,14 +104,18 @@ struct AddManualSessionSheet: View {
                     Text("Начало")
                     Spacer()
                     DatePicker("", selection: $startAt, displayedComponents: [.date, .hourAndMinute])
-                        .labelsHidden()
+                    .labelsHidden()
+                    .environment(\.locale, Locale(identifier: "ru_RU"))
+                    
                 }
 
                 HStack {
                     Text("Конец")
                     Spacer()
                     DatePicker("", selection: $endAt, displayedComponents: [.date, .hourAndMinute])
-                        .labelsHidden()
+                    .labelsHidden()
+                    .environment(\.locale, Locale(identifier: "ru_RU"))
+
                 }
 
                 if endAt <= startAt {

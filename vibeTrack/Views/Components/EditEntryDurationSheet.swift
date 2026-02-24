@@ -32,7 +32,10 @@ struct EditEntryTimeSheet: View {
             Form {
                 Section("Время") {
                     DatePicker("Начало", selection: $startAt, displayedComponents: [.date, .hourAndMinute])
+                        .environment(\.locale, Locale(identifier: "ru_RU"))
+
                     DatePicker("Конец", selection: $endAt, displayedComponents: [.date, .hourAndMinute])
+                        .environment(\.locale, Locale(identifier: "ru_RU"))
 
                     if endAt <= startAt {
                         Text("Конец должен быть позже начала")
@@ -71,6 +74,8 @@ struct EditEntryTimeSheet: View {
                     Spacer()
                     DatePicker("", selection: $startAt, displayedComponents: [.date, .hourAndMinute])
                         .labelsHidden()
+                        .environment(\.locale, Locale(identifier: "ru_RU"))
+
                 }
 
                 HStack {
@@ -78,6 +83,8 @@ struct EditEntryTimeSheet: View {
                     Spacer()
                     DatePicker("", selection: $endAt, displayedComponents: [.date, .hourAndMinute])
                         .labelsHidden()
+                        .environment(\.locale, Locale(identifier: "ru_RU"))
+
                 }
 
                 if endAt <= startAt {

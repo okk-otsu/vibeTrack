@@ -12,6 +12,8 @@ struct ScreenTimeWeekChart: View {
     let days: [StatsService.DayStack]
     let dailyAvgSeconds: Int
 
+    private let ruLocale = Locale(identifier: "ru_RU")
+
     private var maxMinutes: Double {
         let maxDay = days.map(\.totalSeconds).max() ?? 0
         let maxVal = max(maxDay, dailyAvgSeconds)
@@ -23,19 +25,19 @@ struct ScreenTimeWeekChart: View {
             ForEach(days) { day in
                 ForEach(day.parts) { part in
                     BarMark(
-                        x: .value("Day", day.day, unit: .day),
-                        y: .value("Minutes", Double(part.seconds) / 60.0),
+                        x: .value("День", day.day, unit: .day),
+                        y: .value("Минуты", Double(part.seconds) / 60.0),
                         width: .fixed(14)
                     )
                     .foregroundStyle(Color(hex: part.colorHex))
                 }
             }
 
-            RuleMark(y: .value("avg", Double(dailyAvgSeconds) / 60.0))
+            RuleMark(y: .value("ср.", Double(dailyAvgSeconds) / 60.0))
                 .lineStyle(StrokeStyle(lineWidth: 1, dash: [4, 4]))
                 .foregroundStyle(.green.opacity(0.9))
                 .annotation(position: .trailing) {
-                    Text("avg")
+                    Text("ср.")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
@@ -56,8 +58,8 @@ struct ScreenTimeWeekChart: View {
                     AxisGridLine()
                     AxisValueLabel {
                         if v == 0 { Text("0") }
-                        else if top <= 60 { Text("\(Int(v))m") }
-                        else { Text("\(Int(v / 60))h") }
+                        else if top <= 60 { Text("\(Int(v))м") }
+                        else { Text("\(Int(v / 60))ч") }
                     }
                 }
             }
@@ -68,7 +70,11 @@ struct ScreenTimeWeekChart: View {
                 AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5, dash: [2, 3]))
                 AxisValueLabel {
                     if let d = v.as(Date.self) {
-                        Text(d.formatted(.dateTime.weekday(.narrow)))
+                        Text(d.formatted(
+                            .dateTime
+                                .weekday(.abbreviated)
+                                .locale(ruLocale)
+                        ))
                     }
                 }
             }

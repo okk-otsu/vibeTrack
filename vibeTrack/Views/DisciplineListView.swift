@@ -99,7 +99,7 @@ struct DisciplineListView: View {
 
     private var listView: some View {
         List {
-            Section("Дисциплины") {
+            Section("") {
                 ForEach(disciplines) { d in
                     row(for: d)
                 }

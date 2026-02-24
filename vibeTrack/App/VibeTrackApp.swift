@@ -17,6 +17,7 @@ struct VibeTrackApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(timerService)
+                .environment(\.locale, Locale(identifier: "ru_RU"))
         }
         .modelContainer(for: [Discipline.self, TimeEntry.self])
     }
@@ -31,7 +32,7 @@ struct RootView: View {
             NavigationStack {
                 DisciplineListView()
             }
-            .tabItem { Label("Сессии", systemImage: "timer") }
+            .tabItem { Label("Дисциплины", systemImage: "timer") }
 
             NavigationStack {
                 StatsView()

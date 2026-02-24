@@ -15,6 +15,8 @@ struct StatsView: View {
     @State private var weekOffset: Int = 0
     private let maxWeeksBack = 7
 
+    private let ruLocale = Locale(identifier: "ru_RU")
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -103,11 +105,11 @@ struct StatsView: View {
 
         return VStack(alignment: .leading, spacing: 12) {
 
-            Text("LESSON TIME")
+            Text("ВРЕМЯ ЗАНЯТИЙ")
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
-            Text("\(weekRangeTitle(for: start)) Average")
+            Text("\(weekRangeTitle(for: start)) · Среднее")
                 .foregroundStyle(.secondary)
 
             HStack(alignment: .firstTextBaseline) {
@@ -120,7 +122,7 @@ struct StatsView: View {
                 if let delta {
                     HStack(spacing: 6) {
                         Image(systemName: delta >= 0 ? "arrow.up" : "arrow.down")
-                        Text("\(abs(delta)) % from last week")
+                        Text("\(abs(delta)) % к прошлой неделе")
                     }
                     .font(.callout)
                     .foregroundStyle(.secondary)
@@ -130,7 +132,7 @@ struct StatsView: View {
             ScreenTimeWeekChart(days: days, dailyAvgSeconds: avg)
 
             HStack {
-                Text("Total Lesson Time")
+                Text("Общее время занятий")
                 Spacer()
                 Text(prettyForCard(totalWeek))
                     .foregroundStyle(.secondary)
@@ -153,7 +155,7 @@ struct StatsView: View {
 
         let top = StatsService.topDisciplinesForWeek(weekStart: start, modelContext: modelContext)
 
-        return MostUsedListView(title: "Most Used", rows: top)
+        return MostUsedListView(title: "Рейтинг дисциплин", rows: top)
             .padding(.horizontal)
     }
 
@@ -170,11 +172,11 @@ struct StatsView: View {
         let sameYear  = cal.component(.year,  from: weekStart) == cal.component(.year,  from: weekEnd)
 
         if sameMonth && sameYear {
-            let month = weekStart.formatted(.dateTime.month(.abbreviated))
+            let month = weekStart.formatted(.dateTime.month(.abbreviated).locale(ruLocale))
             return "\(startDay)–\(endDay) \(month)"
         } else {
-            let startStr = weekStart.formatted(.dateTime.day().month(.abbreviated))
-            let endStr   = weekEnd.formatted(.dateTime.day().month(.abbreviated))
+            let startStr = weekStart.formatted(.dateTime.day().month(.abbreviated).locale(ruLocale))
+            let endStr   = weekEnd.formatted(.dateTime.day().month(.abbreviated).locale(ruLocale))
             return "\(startStr) – \(endStr)"
         }
     }
@@ -183,7 +185,7 @@ struct StatsView: View {
         let h = seconds / 3600
         let m = (seconds % 3600) / 60
 
-        if h > 0 { return "\(h)h \(m)m" }
-        return "\(m)m"
+        if h > 0 { return "\(h)ч \(m)м" }
+        return "\(m)м"
     }
 }

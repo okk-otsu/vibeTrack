@@ -11,16 +11,11 @@
 		FA6CDF9E2F4BE3E200C2B58F /* EditEntryDurationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDF9D2F4BE3E100C2B58F /* EditEntryDurationSheet.swift */; };
 		FA6CDFA22F4BE95300C2B58F /* TimelineListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDFA12F4BE95200C2B58F /* TimelineListScreen.swift */; };
 		FA7F11302EFAC34900F87E3C /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */; };
-		FA7F11312EFAC34900F87E3C /* ScreenTimeDayChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */; };
-		FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */; };
 		FA7F11332EFAC34900F87E3C /* AddEditDisciplineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */; };
-		FA7F11342EFAC34900F87E3C /* DateBuckets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */; };
-		FA7F11352EFAC34900F87E3C /* DonutBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */; };
 		FA7F11362EFAC34900F87E3C /* MostUsedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */; };
 		FA7F11372EFAC34900F87E3C /* ScreenTimeWeekChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */; };
 		FA7F11382EFAC34900F87E3C /* DisciplineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */; };
 		FA7F11392EFAC34900F87E3C /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F112E2EFAC34900F87E3C /* StatsView.swift */; };
-		FA7F113A2EFAC34900F87E3C /* MonthHeatmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */; };
 		FA7F113B2EFAC34900F87E3C /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111B2EFAC34900F87E3C /* ColorHex.swift */; };
 		FA7F113C2EFAC34900F87E3C /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111E2EFAC34900F87E3C /* TimerService.swift */; };
 		FA7F113D2EFAC34900F87E3C /* Discipline.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11172EFAC34900F87E3C /* Discipline.swift */; };
@@ -30,7 +25,6 @@
 		FA7F11412EFAC34900F87E3C /* ColorPickerGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */; };
 		FA7F11422EFAC34900F87E3C /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F111D2EFAC34900F87E3C /* StatsService.swift */; };
 		FA7F11432EFAC34900F87E3C /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11182EFAC34900F87E3C /* TimeEntry.swift */; };
-		FA7F11442EFAC34900F87E3C /* TrendLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11272EFAC34900F87E3C /* TrendLineView.swift */; };
 		FA7F11452EFAC34900F87E3C /* VibeTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F11142EFAC34900F87E3C /* VibeTrackApp.swift */; };
 		FA7F11462EFAC34900F87E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7F11162EFAC34900F87E3C /* Assets.xcassets */; };
 		FAE25F792F4CF782000FDB4E /* AddManualSessionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE25F782F4CF780000FDB4E /* AddManualSessionSheet.swift */; };
@@ -47,18 +41,12 @@
 		FA7F11182EFAC34900F87E3C /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
 		FA7F111A2EFAC34900F87E3C /* ActiveTimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTimerState.swift; sourceTree = "<group>"; };
 		FA7F111B2EFAC34900F87E3C /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
-		FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuckets.swift; sourceTree = "<group>"; };
 		FA7F111D2EFAC34900F87E3C /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
 		FA7F111E2EFAC34900F87E3C /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
 		FA7F11202EFAC34900F87E3C /* BigTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTimerView.swift; sourceTree = "<group>"; };
 		FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGrid.swift; sourceTree = "<group>"; };
-		FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutBreakdownView.swift; sourceTree = "<group>"; };
-		FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthHeatmapView.swift; sourceTree = "<group>"; };
 		FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostUsedListView.swift; sourceTree = "<group>"; };
-		FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeDayChart.swift; sourceTree = "<group>"; };
 		FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeWeekChart.swift; sourceTree = "<group>"; };
-		FA7F11272EFAC34900F87E3C /* TrendLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendLineView.swift; sourceTree = "<group>"; };
-		FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekBarsView.swift; sourceTree = "<group>"; };
 		FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveSessionView.swift; sourceTree = "<group>"; };
 		FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDisciplineView.swift; sourceTree = "<group>"; };
 		FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineListView.swift; sourceTree = "<group>"; };
@@ -81,8 +69,8 @@
 		FA7F10FB2EFAC31000F87E3C = {
 			isa = PBXGroup;
 			children = (
-				FA7F11152EFAC34900F87E3C /* App */,
 				FA7F11162EFAC34900F87E3C /* Assets.xcassets */,
+				FA7F11152EFAC34900F87E3C /* App */,
 				FA7F11192EFAC34900F87E3C /* Models */,
 				FA7F111F2EFAC34900F87E3C /* Services */,
 				FA7F112F2EFAC34900F87E3C /* Views */,
@@ -120,7 +108,6 @@
 			children = (
 				FA7F111A2EFAC34900F87E3C /* ActiveTimerState.swift */,
 				FA7F111B2EFAC34900F87E3C /* ColorHex.swift */,
-				FA7F111C2EFAC34900F87E3C /* DateBuckets.swift */,
 				FA7F111D2EFAC34900F87E3C /* StatsService.swift */,
 				FA7F111E2EFAC34900F87E3C /* TimerService.swift */,
 			);
@@ -135,13 +122,8 @@
 				FA6CDF9D2F4BE3E100C2B58F /* EditEntryDurationSheet.swift */,
 				FA7F11202EFAC34900F87E3C /* BigTimerView.swift */,
 				FA7F11212EFAC34900F87E3C /* ColorPickerGrid.swift */,
-				FA7F11222EFAC34900F87E3C /* DonutBreakdownView.swift */,
-				FA7F11232EFAC34900F87E3C /* MonthHeatmapView.swift */,
 				FA7F11242EFAC34900F87E3C /* MostUsedListView.swift */,
-				FA7F11252EFAC34900F87E3C /* ScreenTimeDayChart.swift */,
 				FA7F11262EFAC34900F87E3C /* ScreenTimeWeekChart.swift */,
-				FA7F11272EFAC34900F87E3C /* TrendLineView.swift */,
-				FA7F11282EFAC34900F87E3C /* WeekBarsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -149,13 +131,13 @@
 		FA7F112F2EFAC34900F87E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA6CDF9B2F4BE33600C2B58F /* TimelineView.swift */,
 				FA7F11292EFAC34900F87E3C /* Components */,
 				FA7F112A2EFAC34900F87E3C /* ActiveSessionView.swift */,
 				FA7F112B2EFAC34900F87E3C /* AddEditDisciplineView.swift */,
 				FA7F112C2EFAC34900F87E3C /* DisciplineListView.swift */,
 				FA7F112D2EFAC34900F87E3C /* DisciplineRow.swift */,
 				FA7F112E2EFAC34900F87E3C /* StatsView.swift */,
+				FA6CDF9B2F4BE33600C2B58F /* TimelineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,12 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7F11302EFAC34900F87E3C /* ActiveSessionView.swift in Sources */,
-				FA7F11312EFAC34900F87E3C /* ScreenTimeDayChart.swift in Sources */,
-				FA7F11322EFAC34900F87E3C /* WeekBarsView.swift in Sources */,
 				FA7F11332EFAC34900F87E3C /* AddEditDisciplineView.swift in Sources */,
-				FA7F11342EFAC34900F87E3C /* DateBuckets.swift in Sources */,
 				FA6CDF9E2F4BE3E200C2B58F /* EditEntryDurationSheet.swift in Sources */,
-				FA7F11352EFAC34900F87E3C /* DonutBreakdownView.swift in Sources */,
 				FA6CDFA22F4BE95300C2B58F /* TimelineListScreen.swift in Sources */,
 				FA6CDF9C2F4BE33800C2B58F /* TimelineView.swift in Sources */,
 				FA7F11362EFAC34900F87E3C /* MostUsedListView.swift in Sources */,
@@ -246,7 +224,6 @@
 				FA7F11382EFAC34900F87E3C /* DisciplineRow.swift in Sources */,
 				FAE25F792F4CF782000FDB4E /* AddManualSessionSheet.swift in Sources */,
 				FA7F11392EFAC34900F87E3C /* StatsView.swift in Sources */,
-				FA7F113A2EFAC34900F87E3C /* MonthHeatmapView.swift in Sources */,
 				FA7F113B2EFAC34900F87E3C /* ColorHex.swift in Sources */,
 				FA7F113C2EFAC34900F87E3C /* TimerService.swift in Sources */,
 				FA7F113D2EFAC34900F87E3C /* Discipline.swift in Sources */,
@@ -256,7 +233,6 @@
 				FA7F11412EFAC34900F87E3C /* ColorPickerGrid.swift in Sources */,
 				FA7F11422EFAC34900F87E3C /* StatsService.swift in Sources */,
 				FA7F11432EFAC34900F87E3C /* TimeEntry.swift in Sources */,
-				FA7F11442EFAC34900F87E3C /* TrendLineView.swift in Sources */,
 				FA7F11452EFAC34900F87E3C /* VibeTrackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
