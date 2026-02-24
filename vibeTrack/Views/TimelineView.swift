@@ -158,8 +158,11 @@ private extension TimelineView {
     }
 
     func durationText(_ entry: TimeEntry) -> String {
-        let seconds = entry.durationSeconds
-        let minutes = seconds / 60
+        print("DRAW:",
+              "endedAt:", entry.endedAt as Any,
+              "durationSeconds:", entry.durationSeconds,
+              "accumulatedSeconds:", entry.accumulatedSeconds)
+        let minutes = entry.durationSeconds / 60
         let hours = minutes / 60
         let remaining = minutes % 60
 
@@ -171,13 +174,14 @@ private extension TimelineView {
 
     func adjust(_ entry: TimeEntry, delta: Int) {
         let newValue = max(60, entry.durationSeconds + delta)
-        entry.durationSeconds = newValue
 
-        if let start = entry.startedAt as Date? {
-            entry.endedAt = start.addingTimeInterval(TimeInterval(newValue))
+        entry.endedAt = entry.startedAt.addingTimeInterval(TimeInterval(newValue))
+
+        do {
+            try modelContext.save()
+        } catch {
+            print("Save error:", error)
         }
-
-        try? modelContext.save()
     }
 }
 
@@ -186,30 +190,42 @@ struct EditEntrySheet: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
-    let entry: TimeEntry
-    @State private var minutes: Int = 25
+    @Bindable var entry: TimeEntry
+
+    @State private var startAt: Date
+    @State private var endAt: Date
+
+    init(entry: TimeEntry) {
+        self.entry = entry
+        _startAt = State(initialValue: entry.startedAt)
+        _endAt = State(initialValue: entry.endedAt ?? entry.startedAt)
+    }
 
     var body: some View {
-        NavigationStack {
-            Form {
-                Stepper("Минут: \(minutes)", value: $minutes, in: 1...720)
+        VStack {
+            DatePicker("Начало", selection: $startAt, displayedComponents: [.date, .hourAndMinute])
+            DatePicker("Конец", selection: $endAt, displayedComponents: [.date, .hourAndMinute])
 
+            HStack {
+                Button("Отмена") { dismiss() }
                 Button("Сохранить") {
-                    entry.durationSeconds = minutes * 60
-                    entry.endedAt = entry.startedAt.addingTimeInterval(TimeInterval(minutes * 60))
-                    try? modelContext.save()
-                    dismiss()
+                    entry.startedAt = startAt
+                    entry.endedAt = endAt
+
+                    let duration = max(0, Int(endAt.timeIntervalSince(startAt)))
+                    entry.accumulatedSeconds = duration
+                    entry.runningSegmentStartedAt = nil
+                    entry.isRunning = false
+
+                    do {
+                        try modelContext.save()
+                        dismiss()
+                    } catch {
+                        print("Save error:", error)
+                    }
                 }
-            }
-            .navigationTitle("Редактировать")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Отмена") { dismiss() }
-                }
-            }
-            .onAppear {
-                minutes = max(1, entry.durationSeconds / 60)
             }
         }
+        .padding()
     }
 }

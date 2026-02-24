@@ -89,9 +89,9 @@ struct TimelineListScreen: View {
         }
         .sheet(isPresented: $showEditSheet) {
             if let entry = editingEntry {
-                EditEntryTimeSheet(entry: entry)
+                EditEntrySheet(entry: entry)
             } else {
-                Text("Не удалось открыть сессию").padding()
+                Text("Не удалось открыть сессию")
             }
         }
         .onChange(of: showEditSheet) { _, newValue in

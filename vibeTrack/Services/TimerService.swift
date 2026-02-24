@@ -50,8 +50,6 @@ final class TimerService: ObservableObject {
     func stop(modelContext: ModelContext) throws {
         guard let entry = activeEntry else { return }
 
-        let total = Int(Date.now.timeIntervalSince(entry.startedAt))
-        entry.durationSeconds = max(0, total)
         entry.endedAt = .now
 
         try modelContext.save()

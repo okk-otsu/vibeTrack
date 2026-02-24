@@ -223,7 +223,6 @@ struct AddManualSessionSheet: View {
         entry.endedAt = endAt
 
         let duration = max(0, Int(endAt.timeIntervalSince(startAt)))
-        entry.durationSeconds = duration
         entry.accumulatedSeconds = duration
         entry.runningSegmentStartedAt = nil
         entry.isRunning = false
